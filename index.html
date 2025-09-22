@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eduardo Manuitt Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Link to the big reusable stylesheet below -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Header / Navigation ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Site logo / name -->
+      <a class="logo" href="#home">Eduardo Manuitt Portfolio</a>
+
+      <!-- Navigation links (desktop) -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu (hidden on desktop) -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- ===== Hero ===== -->
+    <section class="hero section--hero">
+      <div class="container hero-grid">
+        <!-- Profile picture -->
+        <figure class="profile-figure reveal">
+          <img src="images/profile_pic.jpeg" alt="Eduardo Manuitt" class="profile-img" />
+          <figcaption class="sr-only">Profile picture of Eduardo Manuitt</figcaption>
+        </figure>
+
+        <!-- Intro text -->
+        <div class="hero-content reveal">
+          <h1 class="hero-title">Hi — I’m Eduardo 👋</h1>
+          <p class="hero-lead">
+            Aspiring software developer. I build small tools that solve real problems — from simple CRMs to
+            data-driven trackers. Scroll to see my projects and experience.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">See projects</a>
+            <a class="btn" href="#contact">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section section--alt reveal">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-intro">
+          I’m a recent graduate at Lake Forest College and a self-taught developer who enjoys building
+          useful, simple web applications. I like clear UIs, neat code, and practical features.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section id="education" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <ul class="simple-list">
+          <li><strong>Lake Forest College</strong> — B.A. Computer Science (Expected May 2025)</li>
+          <li><strong>Relevant courses:</strong> Web Development, Databases, Software Engineering</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience" class="section section--alt reveal">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <ul class="experience-list">
+          <li>
+            <strong>Business Development</strong> — RXO Logistics (May 2025–Present)
+            <p class="muted">Helping customers track freight, resolve issues, and manage shipments.</p>
+          </li>
+          <li>
+            <strong>Freelance Tutor</strong>
+            <p class="muted">Taught programming basics</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">Live demos and links to code are included. Click to explore each project.</p>
+
+        <!-- Responsive project grid -->
+        <div class="project-grid">
+          <!-- Project card template -->
+          <article class="card project-card reveal">
+            <img class="card-img" src="images/crm.png" alt="CRM project screenshot" />
+            <div class="card-body">
+              <h3 class="card-title">CRM Application</h3>
+              <p class="card-text">A simple CRM built with C#/.NET and SQLite — includes contacts, notes, and search.</p>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://yourcrm.azurewebsites.net" target="_blank" rel="noopener">View live</a>
+                <a class="btn" href="https://github.com/manuittel/crm" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <img class="card-img" src="images/weather.png" alt="Weather app screenshot" />
+            <div class="card-body">
+              <h3 class="card-title">What's the Weather</h3>
+              <p class="card-text">Shows forecast and suggests outfits & activities based on the weather.</p>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="#" target="_blank">View live</a>
+                <a class="btn" href="#" target="_blank">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <img class="card-img" src="images/crypto.png" alt="Crypto tracker screenshot" />
+            <div class="card-body">
+              <h3 class="card-title">Crypto Price Tracker</h3>
+              <p class="card-text">Backend (C#) that proxies CoinGecko and shows real-time prices & simple charts.</p>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="#" target="_blank">View live</a>
+                <a class="btn" href="#" target="_blank">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section section--alt reveal">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-intro">Email: <a href="mailto:edumamuitt@gmail.com">edumanuitt@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">My LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/manuittel" target="_blank">My GitHub</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Eduardo Manuitt — Built with HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Link to the reusable script -->
+  <script src="script.js"></script>
+</body>
+</html>
